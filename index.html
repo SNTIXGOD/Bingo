@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingoDev | Desarrollo Web Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    <header>
+        <nav>
+            <div class="logo">BingoDev</div>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#por-que">¿Por qué elegirme?</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Desarrollo Web Profesional</h1>
+            <p>Landing pages para negocios locales, portafolios para profesionales, páginas de eventos. Rápido, seguro y sin complicaciones.</p>
+            <p><strong>Más clientes gracias a un sitio que carga en segundos.</strong></p>
+            <a href="#contacto" class="cta-btn">Contáctanos ahora</a>
+        </div>
+        <!-- Eliminado el cuadro de "Web Modernas" -->
+    </section>
+
+    <section id="servicios" class="services">
+        <h2 class="section-title">Mis servicios</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>🚀 Despliegue rápido</h3>
+                <p>Despliegues en segundos con Netlify, subdominio <code>tuempresa.netlify.app</code> y SSL gratis incluidos.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-lock"></i>
+                <h3>🔒 Seguridad SSL</h3>
+                <p>Todos los sitios vienen con certificado SSL gratuito para mayor confianza.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>📱 Diseño responsive</h3>
+                <p>Tu web se ve bien en móviles, tablets y escritorio.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>⚡ Optimización de carga</h3>
+                <p>Imágenes comprimidas y código optimizado para que tu web vuele.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="por-why" class="why-us">
+        <h2 class="section-title">¿Por qué elegirme?</h2>
+        <ul>
+            <li>Despliegue en Netlify con subdominio <code>tuempresa.netlify.app</code> y SSL gratis incluidos</li>
+            <li>Optimización de rendimiento: carga rápida, menos consumo de ancho de banda</li>
+            <li>Diseño moderno, responsive y sin CMS complicados</li>
+        </ul>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2 class="section-title">¿Listo para tener tu web?</h2>
+        <p>¡Hablemos por WhatsApp o Facebook!</p>
+        <div class="contact-options">
+            <a href="https://www.facebook.com/share/16PfcaxxHF/?mibextid=wwXIfr" class="cta-btn facebook" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <button class="cta-btn whatsapp" data-number="+58 424-6545266">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <button class="whatsapp-float" data-number="+58 424-6545266">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <div id="copy-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <p>Copia nuestro número de WhatsApp:</p>
+            <div class="copy-container">
+                <input type="text" id="whatsapp-number" readonly>
+                <button id="copy-button"><i class="fas fa-copy"></i></button>
+            </div>
+            <span id="copy-feedback"></span>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
