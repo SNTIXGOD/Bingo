@@ -1,13 +1,3 @@
-// Alternar modo oscuro
-const themeToggle = document.getElementById('theme-toggle');
-const icon = themeToggle.querySelector('i');
-
-themeToggle.addEventListener('click', () => {
-    document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-    icon.classList.toggle('fa-sun');
-    icon.classList.toggle('fa-moon');
-});
-
 // Toggle menú móvil
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -68,17 +58,5 @@ copyButton.addEventListener('click', () => {
         });
     } catch (err) {
         copyFeedback.textContent = 'Error al copiar';
-    }
-});
-
-// Alerta de éxito en formulario
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("¡Gracias por tu mensaje! Te contactaré pronto.");
-            form.reset();
-        });
     }
 });
