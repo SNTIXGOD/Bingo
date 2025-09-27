@@ -25,16 +25,22 @@ const numberInput = document.getElementById('whatsapp-number');
 const copyButton = document.getElementById('copy-button');
 const copyFeedback = document.getElementById('copy-feedback');
 
+// Función que abre el modal y carga el número
+function openWhatsAppModal(button) {
+    const number = button.dataset.number;
+    numberInput.value = number;
+    modal.style.display = 'flex';
+    copyFeedback.textContent = '';
+}
+
 whatsappButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const number = button.dataset.number;
-        numberInput.value = number;
-        modal.style.display = 'flex';
-        copyFeedback.textContent = '';
+        e.preventDefault(); // Evita cualquier comportamiento por defecto
+        openWhatsAppModal(button);
     });
 });
 
+// Cerrar modal
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
@@ -45,9 +51,10 @@ modal.addEventListener('click', (e) => {
     }
 });
 
+// Copiar número
 copyButton.addEventListener('click', () => {
     numberInput.select();
-    numberInput.setSelectionRange(0, 99999); // Para móviles
+    numberInput.setSelectionRange(0, 99999);
 
     try {
         navigator.clipboard.writeText(numberInput.value).then(() => {
